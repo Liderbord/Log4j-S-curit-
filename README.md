@@ -1,8 +1,5 @@
 # log4j-shell-poc
-A Proof-Of-Concept for the recently found CVE-2021-44228 vulnerability. <br><br>
-Recently there was a new vulnerability in log4j, a java logging library that is very widely used in the likes of elasticsearch, minecraft and numerous others.
-
-In this repository we have made and example vulnerable application and proof-of-concept (POC) exploit of it.
+A demonstration for showing the log4j vulverability on a classic webserver. <br><br>
 
 
 A video showing the exploitation process
@@ -11,12 +8,6 @@ A video showing the exploitation process
 Vuln Web App:
 
 https://user-images.githubusercontent.com/87979263/146113359-20663eaa-555d-4d60-828d-a7f769ebd266.mp4
-
-
-Proof-of-concept (POC)
-----------------------
-
-As a PoC we have created a python file that automates the process. 
 
 
 #### Requirements:
